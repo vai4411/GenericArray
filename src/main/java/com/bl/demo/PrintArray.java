@@ -10,18 +10,8 @@ public class PrintArray {
         arrayPrint(charArray);
     }
 
-    private static void arrayPrint(Character[] charArray) {
-        for (char i : charArray)
-            System.out.println(i);
-    }
-
-    private static void arrayPrint(Double[] doubleArray) {
-        for (double i : doubleArray)
-            System.out.println(i);
-    }
-
-    private static void arrayPrint(Integer[] intArray) {
-        for (int i : intArray)
+    private static<T> void arrayPrint(T[] t) {
+        for (T i : t)
             System.out.println(i);
     }
 }
