@@ -10,9 +10,10 @@ public class PrintArray {
         arrayPrint(charArray);
     }
 
-    private static<T> void arrayPrint(T[] t) {
+    public static<T> boolean arrayPrint(T[] t) {
         for (T i : t)
             System.out.println(i);
+        return true;
     }
 }
 
