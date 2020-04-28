@@ -16,4 +16,13 @@ public class PrintArray {
         }
         return max;
     }
+
+    public static Float maximum(Float[] array) {
+        float max = array[0];
+        for (float i : array) {
+            if (max < array[(int) (i-1)])
+                max = array[(int) (i-1)];
+        }
+        return max;
+    }
 }
