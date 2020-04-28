@@ -1,20 +1,19 @@
 package com.bl.demo;
 
 public class PrintArray {
-    public static void main(String[] args) {
-        Integer[] intArray= {1, 2, 3};
-        Double[] doubleArray = {1.1, 1.2, 1.3};
-        Character[] charArray = {'a', 'b', 'c'};
-        arrayPrint(intArray);
-        arrayPrint(doubleArray);
-        arrayPrint(charArray);
+    public static <T> String arrayPrint(T[] t) {
+        String result = "";
+        for (T i : t)
+            result = result + i + " ";
+        return result;
     }
 
-    public static<T> boolean arrayPrint(T[] t) {
-        for (T i : t)
-            System.out.println(i);
-        return true;
+    public static Integer maximum(Integer[] array) {
+        int max = array[0];
+        for (int i : array) {
+            if (max < array[i-1])
+                max = array[i-1];
+        }
+        return max;
     }
 }
-
-
